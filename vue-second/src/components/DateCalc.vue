@@ -31,7 +31,7 @@ window.onload = function() {
   let funcPanel = document.querySelector(".funcPanel");
 
   funcPanel.addEventListener("click", function() {
-    console.log(startDate.val);
+    console.log(startDate.nodeName);
   });
 };
 </script>

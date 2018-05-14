@@ -9,6 +9,9 @@
         <li>
           <router-link to='/dateCalc'>DateCalc</router-link>
         </li>
+        <li>
+          <router-link to='/splitPage'>SplitPage</router-link>
+        </li>
       </ul>
     </div>
     <router-view></router-view>
@@ -18,6 +21,7 @@
 <script>
 import HelloWorld from "./components/HelloWorld";
 import DateCalc from "./components/DateCalc";
+import SplitPage from "./components/SplitPage";
 
 export default {
   name: "App",
@@ -26,7 +30,8 @@ export default {
   // },
   routes: [
     { path: "/hello", component: HelloWorld },
-    { path: "/dateCalc", component: DateCalc }
+    { path: "/dateCalc", component: DateCalc },
+    { path: "/splitPage", component: SplitPage }
   ]
 };
 </script>
