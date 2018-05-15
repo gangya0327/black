@@ -16,23 +16,38 @@
       </div>
       <div class="outPanel">
         <label for="content">计算结果：</label>
-        <span class="content" id="content">13</span>
+        <span class="content" id="content"></span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-//export default {};
-window.onload = function() {
-  let startDate = document.getElementById("startDate");
-  let endDate = document.getElementById("endDate");
-  let content = document.getElementById("content");
-  let funcPanel = document.querySelector(".funcPanel");
+export default {
+  mounted: function() {
+    let content = document.getElementById("content");
+    let funcPanel = document.querySelectorAll(".funcPanel");
 
-  funcPanel.addEventListener("click", function() {
-    console.log(startDate.nodeName);
-  });
+    funcPanel[0].addEventListener("click", function() {
+      let startDate = document.getElementById("startDate").value;
+      let endDate = document.getElementById("endDate").value;
+      if (startDate == "" || endDate == "") {
+        content.innerHTML = "日期输入有误";
+        return;
+      }
+
+      let startTime = new Date(Date.parse(startDate.replace(/-/g, "/")));
+      let endTime = new Date(Date.parse(endDate.replace(/-/g, "/")));
+
+      let dateOffset = endTime.getTime() - startTime.getTime();
+      let years = dateOffset / (1000 * 60 * 60 * 24 * 365);
+      dateOffset = dateOffset - parseInt(years) * 1000 * 60 * 60 * 24 * 365;
+      let days = dateOffset / (1000 * 60 * 60 * 24);
+
+      content.innerHTML =
+        parseInt(years) + " 年 " + days + " 天 ";
+    });
+  }
 };
 </script>
 
@@ -75,7 +90,7 @@ window.onload = function() {
   padding: 7px 10px;
   color: #fff;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 16px;
 }
 .btn:hover {

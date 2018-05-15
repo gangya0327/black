@@ -5,6 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+
 Vue.config.productionTip = false
 
 const router = new VueRouter({

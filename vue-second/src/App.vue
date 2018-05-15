@@ -4,13 +4,16 @@
       <img src="./assets/logo.png">
       <ul>
         <li>
-          <router-link to='/hello'>Hello</router-link>
+          <router-link to='/hello'>HelloWorld</router-link>
         </li>
         <li>
           <router-link to='/dateCalc'>DateCalc</router-link>
         </li>
         <li>
           <router-link to='/splitPage'>SplitPage</router-link>
+        </li>
+         <li>
+          <router-link to='/chartDemo'>ChartDemo</router-link>
         </li>
       </ul>
     </div>
@@ -22,6 +25,7 @@
 import HelloWorld from "./components/HelloWorld";
 import DateCalc from "./components/DateCalc";
 import SplitPage from "./components/SplitPage";
+import ChartDemo from "./components/ChartDemo";
 
 export default {
   name: "App",
@@ -31,7 +35,8 @@ export default {
   routes: [
     { path: "/hello", component: HelloWorld },
     { path: "/dateCalc", component: DateCalc },
-    { path: "/splitPage", component: SplitPage }
+    { path: "/splitPage", component: SplitPage },
+    { path: "/chartDemo", component: ChartDemo },
   ]
 };
 </script>
@@ -42,7 +47,6 @@ body {
   padding: 0;
 }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

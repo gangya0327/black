@@ -14,25 +14,26 @@
 </template>
 
 <script>
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-const container = document.querySelector(".container");
-
-left.addEventListener("mouseenter", () => {
-  container.classList.add("hover-left");
-});
-left.addEventListener("mouseleave", () => {
-  container.classList.remove("hover-left");
-});
-right.addEventListener("mouseenter", () => {
-  container.classList.add("hover-right");
-});
-right.addEventListener("mouseleave", () => {
-  container.classList.remove("hover-right");
-});
-
 export default {
-  name: "splitPage"
+  name: "splitPage",
+  mounted: function() {
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
+    const container = document.querySelector(".container");
+
+    left.addEventListener("mouseenter", () => {
+      container.classList.add("hover-left");
+    });
+    left.addEventListener("mouseleave", () => {
+      container.classList.remove("hover-left");
+    });
+    right.addEventListener("mouseenter", () => {
+      container.classList.add("hover-right");
+    });
+    right.addEventListener("mouseleave", () => {
+      container.classList.remove("hover-right");
+    });
+  }
 };
 </script>
 
@@ -44,6 +45,9 @@ export default {
   --right-bg-color: rgba(43, 43, 43, 0.8);
   --left-btn-hover-color: rgba(161, 11, 11, 0.3);
   --right-btn-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
 }
 html,
 body,
@@ -119,10 +123,45 @@ h1 {
 }
 .split.left .btn:hover {
   background-color: var(--left-btn-hover-color);
-  border: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
 }
 .split.right .btn:hover {
   background-color: var(--right-btn-hover-color);
   border-color: var(--right-btn-hover-color);
+}
+/* 过渡动画 */
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+  transition: var(--speed) all ease-in-out;
+}
+/* hover left & hover right */
+.hover-left .left {
+  width: var(--hover-width);
+}
+.hover-left .right {
+  width: var(--other-width);
+}
+.hover-left .right::before {
+  z-index: 2;
+}
+.hover-right .right {
+  width: var(--hover-width);
+}
+.hover-right .left {
+  width: var(--other-width);
+}
+.hover-right .left::before {
+  z-index: 2;
+}
+/* 响应式 */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .btn {
+    width: 12rem;
+  }
 }
 </style>
