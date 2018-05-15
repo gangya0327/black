@@ -12,8 +12,11 @@
         <li>
           <router-link to='/splitPage'>SplitPage</router-link>
         </li>
-         <li>
+        <li>
           <router-link to='/chartDemo'>ChartDemo</router-link>
+        </li>
+        <li>
+          <router-link to='/regexTpl'>RegexTpl</router-link>
         </li>
       </ul>
     </div>
@@ -26,6 +29,7 @@ import HelloWorld from "./components/HelloWorld";
 import DateCalc from "./components/DateCalc";
 import SplitPage from "./components/SplitPage";
 import ChartDemo from "./components/ChartDemo";
+import RegexTpl from "./components/RegexTpl";
 
 export default {
   name: "App",
@@ -37,6 +41,7 @@ export default {
     { path: "/dateCalc", component: DateCalc },
     { path: "/splitPage", component: SplitPage },
     { path: "/chartDemo", component: ChartDemo },
+    { path: "/regexTpl", component: RegexTpl }
   ]
 };
 </script>
@@ -56,6 +61,7 @@ body {
 }
 .nav {
   border-right: 1px solid #eee;
+  background-color: #ddd;
 }
 .nav img {
   width: 120px;
