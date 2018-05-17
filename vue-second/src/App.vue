@@ -18,6 +18,9 @@
         <li>
           <router-link to='/regexTpl'>RegexTpl</router-link>
         </li>
+        <li>
+          <router-link to='/rotateDiv'>RotateDiv</router-link>
+        </li>
       </ul>
     </div>
     <router-view></router-view>
@@ -30,6 +33,7 @@ import DateCalc from "./components/DateCalc";
 import SplitPage from "./components/SplitPage";
 import ChartDemo from "./components/ChartDemo";
 import RegexTpl from "./components/RegexTpl";
+import RotateDiv from "./components/RotateDiv";
 
 export default {
   name: "App",
@@ -41,7 +45,8 @@ export default {
     { path: "/dateCalc", component: DateCalc },
     { path: "/splitPage", component: SplitPage },
     { path: "/chartDemo", component: ChartDemo },
-    { path: "/regexTpl", component: RegexTpl }
+    { path: "/regexTpl", component: RegexTpl },
+    { path: "/rotateDiv", component: RotateDiv },
   ]
 };
 </script>
@@ -61,7 +66,7 @@ body {
 }
 .nav {
   border-right: 1px solid #eee;
-  background-color: #ddd;
+  background-color: #eee;
 }
 .nav img {
   width: 120px;
@@ -81,7 +86,8 @@ body {
   margin: 10px 10px;
   display: block;
   border-radius: 2px;
-  border: 1px solid #fff;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 3px #777;
 }
 .nav li a:hover {
   color: skyblue;
