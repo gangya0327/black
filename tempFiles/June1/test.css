@@ -1,0 +1,38 @@
+.showNext i {
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.showNext {
+    position: absolute;
+    right: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    line-height: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+.showNext {
+    position: absolute;
+    right: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    line-height: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 2px;
+    cursor: pointer;
+    border: 1px solid #ececec;
+}
+
+.showNext:hover {
+    background-color: #718aa5;
+    color: #ffffff;
+}

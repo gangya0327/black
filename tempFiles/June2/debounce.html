@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .panel {
+            margin: 100px auto;
+            width: 300px;
+            height: 250px;
+            border: 1px solid;
+            overflow: auto;
+        }
+        
+        li:nth-child(odd) {
+            background: #ccc;
+        }
+    </style>
+</head>
+<script>
+    function debounce(fn, wait) {
+        var timeout = null; //将定时器置空
+        return function() {
+            if (timeout !== null) { //定时器不为空，则清楚定时器
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(fn, wait); //定时器执行，最后触发fn函数
+        }
+    }
+
+    function printTop() {
+        console.log(123)
+    }
+
+    function printTopArgus(argus) {
+        console.log(argus)
+    }
+
+    var panel = document.getElementsByClassName("panel")[0];
+    console.log(this);
+    panel.addEventListener("scroll", debounce(printTop, 1000));
+    //panel.addEventListener("scroll", debounce(printTopArgus, 1000));
+</script>
+
+<body>
+    <div class="panel">
+        <ul>
+            <li>列表01</li>
+            <li>列表02</li>
+            <li>列表03</li>
+            <li>列表04</li>
+            <li>列表05</li>
+            <li>列表06</li>
+            <li>列表07</li>
+            <li>列表08</li>
+            <li>列表09</li>
+            <li>列表10</li>
+            <li>列表11</li>
+            <li>列表12</li>
+            <li>列表13</li>
+            <li>列表14</li>
+            <li>列表15</li>
+            <li>列表16</li>
+            <li>列表17</li>
+            <li>列表18</li>
+            <li>列表19</li>
+            <li>列表20</li>
+            <li>列表21</li>
+            <li>列表22</li>
+            <li>列表23</li>
+            <li>列表24</li>
+            <li>列表25</li>
+            <li>列表26</li>
+            <li>列表27</li>
+            <li>列表28</li>
+            <li>列表29</li>
+            <li>列表30</li>
+            <li>列表31</li>
+            <li>列表32</li>
+            <li>列表33</li>
+            <li>列表34</li>
+            <li>列表35</li>
+            <li>列表36</li>
+            <li>列表37</li>
+            <li>列表38</li>
+            <li>列表39</li>
+            <li>列表40</li>
+        </ul>
+    </div>
+</body>
+
+</html>
