@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="//static.runoob.com/images/favicon.ico" mce_href="//static.runoob.com/images/favicon.ico"
+        type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="//code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .main {
+            margin: 100px auto;
+            width: 400px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 20px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px 10px;
+            min-width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <select name="" id="pickList">
+            <option value="1">一级列表</option>
+            <option value="2">二级列表</option>
+            <option value="3">三级列表</option>
+        </select>
+    </div>
+    <div class="main">
+        <select name="" id="mainSelect" size="10" multiple>
+        </select>
+
+        <div class="btns">
+            <button id="toRight"> &gt; </button>
+            <button id="toLeft"> &lt; </button>
+        </div>
+
+        <select name="" id="viceSelect" size="10" multiple>
+        </select>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var mainGroup = []  //存放未分组城市
+            var viceGroup = []  //存放已分级城市
+            var cityGroup = [ 
+                ["北京", "上海", "广州", "深圳", "杭州"], 
+                ["石家庄", "沈阳", "福州", "济南", "武汉", "成都", "昆明", "兰州", "台北", "太原", "长春", "南昌"], 
+                ["重庆", "宁波", "青岛", "绍兴", "天津", "苏州", "东莞"] 
+            ]
+
+            //选择城市列表改变
+            $("#pickList").change(function () {
+                var valSelected = $(this).find("option:selected").index()
+                viceGroup = cityGroup[valSelected]
+                console.log("viceGroup ", viceGroup)
+                //viceSelect = null;
+                loadGroup(viceGroup, viceSelect)
+            })
+
+            //将当前viceSelect数据绑定进不同级分组
+            function bindGroup() {
+                var valSelected = $("#pickList").find("option:selected").index()
+                viceGroup = cityGroup[valSelected]
+            }
+
+            //将数组装载到列表
+            function loadGroup(Group, Select) {
+                $(Select).html("")
+                for (var i = 0; i < Group.length; i++) {
+                    var opt = document.createElement("option");
+                    $(opt).val(Group[i]);
+                    $(opt).html(Group[i]);
+                    $(opt).appendTo($(Select));
+                }
+            }
+            var mainSelect = $("#mainSelect");
+            var viceSelect = $("#viceSelect");
+            //初始化数据
+            loadGroup(mainGroup, mainSelect) //左侧主列表
+            loadGroup(cityGroup[0], viceSelect) //右侧副列表
+            bindGroup();
+
+            //点击箭头按钮
+            $("#toRight").click(function () {
+                moveSelect($("#mainSelect"), $("#viceSelect"), mainGroup, viceGroup)
+                bindGroup()
+            })
+            $("#toLeft").click(function () {
+                moveSelect($("#viceSelect"), $("#mainSelect"), viceGroup, mainGroup)
+                bindGroup()
+            })
+
+            //列表内容移动，同步改变数组
+            function moveSelect(fromSelect, toSelect, mainGroup, viceGroup) {
+                var selected = $(fromSelect).find("option:selected")
+                $.each(selected, function (i, v) {
+                    viceGroup.push(v.value)
+                    mainGroup.splice(v.index, 1)
+                    $(v).appendTo($(toSelect))
+                    $(v).attr("selected", false)
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

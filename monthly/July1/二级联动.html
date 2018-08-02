@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .main {
+            margin: 100px auto;
+            width: 400px;
+            display: flex;
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 20px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <select name="" id="mainSelect" size="6" multiple>
+        </select>
+
+        <div class="btns">
+            <button id="toRight"> &gt; </button>
+            <button id="toLeft"> &lt; </button>
+        </div>
+
+        <select name="" id="secondSelect" size="6" multiple>
+        </select>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var mainGroup = ["杭州", "苏州", "天津", "雄安", "南京",
+                "济南", "郑州", "重庆", "武汉", "西安",
+                "沈阳", "宁波", "东莞", "青岛", "成都"
+            ]
+            console.log(mainGroup.length);
+            var defaultGroup = ["北京", "上海", "广州", "深圳"]
+
+            function loadGroup(Group, Select) {
+                for (var i = 0; i < Group.length; i++) {
+                    var opt = document.createElement("option");
+                    $(opt).val(Group[i]);
+                    $(opt).html(Group[i]);
+                    $(opt).appendTo($(Select));
+                }
+            }
+            loadGroup(mainGroup, mainSelect)
+            loadGroup(defaultGroup, secondSelect)
+
+            // $("#toRight").click(function () {
+            //     doSelect(select1,select2);
+            // })
+            // function doSelect(select1, select2){
+            //     var selected = $(select1).find("option:selected");
+            //     console.log(selected)
+            //     $.each(selected, function (i, v) {
+            //         console.log(v.index)
+            //         console.log(v.value)
+            //         $(v).appendTo($(select2))
+            //         defaultGroup.push(v.value)
+            //         mainGroup.splice(v.indx, 1)
+            //         console.log(defaultGroup)
+            //         console.log(mainGroup)
+            //         $(v).attr("selected", false)
+            //     })
+            // }
+
+            $("#toRight").click(function () {
+                var selected = $("#mainSelect").find("option:selected");
+                console.log(selected)
+                $.each(selected, function (i, v) {
+                    console.log(v.index)
+                    console.log(v.value)
+                    $(v).appendTo($("#secondSelect"))
+                    defaultGroup.push(v.value)
+                    mainGroup.splice(v.indx, 1)
+                    console.log(defaultGroup)
+                    console.log(mainGroup)
+                    $(v).attr("selected", false)
+                })
+            });
+        })
+    </script>
+</body>
+
+</html>

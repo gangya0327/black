@@ -1,0 +1,234 @@
+/*
+    本文件包括：
+    1. 工具样式类
+    2. 覆盖bootstrap默认样式的相关代码
+    PS:其他代码勿写在这里
+    飞巴logo色号：#51A6F0
+*/
+/* 工具样式类 */
+.f-dpn {
+    display: none;
+}
+
+.f-tac {
+    text-align: center !important;
+}
+
+.f-tar {
+    text-align: right;
+}
+
+.f-tal {
+    text-align: left !important;
+}
+
+.f-pd0 {
+    padding: 0 !important;
+}
+
+.f-pd10 {
+    padding: 10px !important;
+}
+
+.f-pdl0 {
+    padding-left: 0 !important;
+}
+
+.f-pdt30 {
+    padding-top: 30px;
+}
+
+.f-pb20 {
+    padding-bottom: 20px;
+}
+
+.f-pb50 {
+    padding-bottom: 50px;
+}
+
+.f-pt50 {
+    padding-top: 50px;
+}
+
+.f-mt0 {
+    margin-top: 0 !important;
+}
+
+.f-mt5 {
+    margin-top: 5px !important;
+}
+
+.f-mt10 {
+    margin-top: 10px;
+}
+
+.f-ml15 {
+    margin-left: 15px;
+}
+
+.f-mt20 {
+    margin-top: 20px;
+}
+
+.f-ml20 {
+    margin-left: 20px !important;
+}
+
+.f-mb0 {
+    margin-bottom: 0;
+}
+
+.f-mr10 {
+    margin-right: 10px;
+}
+
+.f-vam {
+    vertical-align: middle !important;
+}
+
+.f-vat {
+    vertical-align: top !important;
+}
+
+.f-vas {
+    vertical-align: sub;
+}
+
+.f-dpib {
+    display: inline-block;
+}
+
+.f-bdn {
+    border: none !important;
+}
+
+.f-ml0 {
+    margin-left: 0 !important;
+}
+
+.f-ml5 {
+    margin-left: 5px;
+}
+
+.f-mr0 {
+    margin-right: 0 !important;
+}
+
+.f-mb5 {
+    margin-bottom: 5px !important;
+}
+
+.f-mb10 {
+    margin-bottom: 10px;
+}
+
+.f-mb0 {
+    margin-bottom: 0;
+}
+
+.f-mb20 {
+    margin-bottom: 20px;
+}
+
+.f-fwb {
+    font-weight: bold;
+}
+
+.f-fwn {
+    font-weight: normal !important;
+}
+
+.f-cp {
+    cursor: pointer;
+}
+
+.f-ofa {
+    overflow: auto;
+}
+
+.f-ofi {
+    overflow: inherit !important;
+}
+
+.f-lh1 {
+    line-height: 1;
+}
+
+.f-pos-r {
+    position: relative;
+}
+
+.line {
+    height: 1px;
+    background-color: #c2cad8;
+    margin: 15px 0;
+}
+
+.red-text {
+    color: #e04127;
+}
+
+.f-wauto {
+    width: auto !important;
+}
+
+.f-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.f-ofh {
+    overflow: hidden;
+}
+
+.f-pageBg {
+    background-color: #eff0f4;
+}
+
+/*文字可点样式*/
+.f-uniqueText {
+    color: #51A6F0;
+}
+
+.f-uniqueText:hover {
+    text-decoration: underline;
+}
+
+/*加载框通用样式*/
+.loadingComponent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*模态框水平垂直居中 样式类*/
+.m-center {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----- 覆盖bootstrap默认样式 -----*/
+/* 模态框 宽50% start*/
+.modal {
+    width: 100%;
+}
+
+.modal .modal-dialog {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.modal .modal-dialog .modal-content {
+    border-radius: 0;
+}
+
+.modal .modal-content .modal-title {
+    width: 100%;
+}
+
+/* 模态框 宽50% end*/

@@ -1,0 +1,16 @@
+有城市，点选项，搜索
+
+无城市，搜索，选项清空
+
+searchListByParams(type){
+    //type = btn ---> searchHotel
+    //type = fun ---> onloadGeo
+}
+searchHotel(){
+    onloadHotelList();
+}
+onloadGeo(){
+    searchHotel(){
+        onloadHotelList();
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+
+            var falg = 0;
+
+            function bar() {
+                var stamp = new Date().getTime();
+                $.ajax({
+                    url: "https://www.easy-mock.com/mock/5b2311e66bed703a9b488c7f/example/upload",
+                    type: "post",
+                    success: function (data) {
+                        console.log(data);
+                        console.log("bar", stamp);
+                    }
+                });
+            }
+
+            function foo() {
+                var stamp = new Date().getTime();
+                $.ajax({
+                    url: "http://localhost:8082/hotel/serch/list?arrivalDate=2018-07-19&departureDate=2018-07-20&cityCode=330100&sortType=0&page=1&rows=10&keyWord=",
+                    type: "get",
+                    success: function (data) {
+                        console.log(data);
+                        console.log("foo", stamp);
+                    }
+                });
+            }
+
+            foo();
+
+            var c = abc();
+
+            function abc() {
+                var count = 0;
+                return function (str) {
+                    if (str == "get") {
+                        return count
+                    } else {
+                        return count++
+                    }
+                }
+            }
+            $('#btnFirst').click(function () {
+                goAjax();
+            });
+            //封装ajax事件
+            function goAjax() {
+                var thisCount = c("adfas") + 1;
+                if (flagg == 1) {
+                    console.log("suzhou");
+                    var myurl =
+                        "http://localhost:8082/hotel/serch/list?arrivalDate=2018-07-19&departureDate=2018-07-20&cityCode=320500&sortType=0&page=1&rows=10&keyWord=";
+                    flagg = 0;
+                } else {
+                    console.log("shanghai");
+                    var myurl =
+                        "http://localhost:8082/hotel/serch/list?arrivalDate=2018-07-19&departureDate=2018-07-20&cityCode=310000&sortType=0&page=1&rows=10&keyWord=&brandCode=32"
+                    flagg = 1;
+                }
+                $.ajax({
+                    url: myurl,
+                    type: "get",
+                    success: function (data) {
+                        $("#divFirst").html(data.hotelData[0].hotelName);
+                        var nowCount = c("get");
+                        console.log("nowCount ", nowCount);
+                        console.log("thisCount", thisCount);
+                    }
+                });
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

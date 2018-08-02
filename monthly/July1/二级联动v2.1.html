@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span style="border:1px solid buttonface; position:absolute; overflow:hidden">
+        <select id="st" style="margin:-2px" onbeforeactivate="getnowid(this.selectedIndex);" onchange="checkct();">
+            <option>ct-001</option>
+            <option>ct-002</option>
+            <option>ct-003</option>
+        </select>
+    </span>
+
+    <script language="javascript">
+        var oldid = 0;
+
+        function getnowid(ct) {
+            oldid = ct;
+        }
+
+        function checkct() { //writed by dh20156
+            if (confirm('Are you sure?')) {
+                alert('Do it!');
+                document.all.st.blur();
+            } else {
+                document.all.st.selectedIndex = oldid;
+                document.all.st.blur();
+                return false;
+            }
+        }
+    </script>F
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=f1851b23d23a8b553f3354a704b5df87"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <button id="change" lati="lati" long="long">change</button>
+
+
+    <div>
+        <br> 0-外观；1-大厅；2-客房；3-浴室；4-公共区域；5-周边环境；
+        <br> 6-餐厅；7-娱乐设施；8-客栈印象图片；空-未设置；-1-其他
+        <div></div>
+        <br> 1 外观 0，5，8
+        <br> 2 内景 1，4
+        <br> 3 房间 2，3
+        <br> 4 其他 6，7 -1 其他
+
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        var position = new AMap.LngLat(39.80923, 116.497428); //标准写法
+        var map = new AMap.Map('container', {
+            zoom: 12, //级别
+            center: position, //中心点坐标
+            viewMode: '3D' //使用3D视图
+        });
+        map
+
+        var change = document.getElementById("change");
+        change.addEventListener("click", function() {
+            position = [114.314023, 30.527087]
+            new AMap.Map('container', {
+                zoom: 12, //级别
+                center: position, //中心点坐标
+                viewMode: '3D' //使用3D视图
+            });
+        })
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        import {
+            isEmail
+        } from "./moduleExport.js"
+        var eg1 = "dafaererw"
+        var eg2 = "@ng@qq.com"
+        var eg3 = "kong@qq.com"
+        console.log(isEmail(eg1));
+        console.log(isEmail(eg2));
+        console.log(isEmail(eg3));
+
+        import("./moduleExport.js").then(function(m){
+            console.log(m);
+        })
+    </script>
+</body>
+
+</html>
