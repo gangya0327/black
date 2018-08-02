@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="zepto.js"></script>
+
+    <!-- 请注意这里type=module才能运行 -->
+    <script type="module">
+        import {Alert, AlertTitle, AlertTitleButton} from './es6class.js'; 
+        var v1 = new Alert(); v1.show(); 
+        var v2 = new AlertTitle();
+        v2.show(); 
+        v2.setTitle('我是标题'); 
+        var v3 = new AlertTitleButton(); 
+        v3.show(); 
+        v3.setTitle('我是标题和按钮的alert');
+    </script>
+</body>
+
+</html>
