@@ -1,0 +1,6 @@
+address
+businessLocationCode
+businessZoneName
+channelId
+cityCode
+cityName

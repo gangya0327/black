@@ -7,12 +7,13 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="zepto.js"></script>
+    <script src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
 
     <!-- 请注意这里type=module才能运行 -->
     <script type="module">
-        import {Alert, AlertTitle, AlertTitleButton} from './es6class.js'; 
-        var v1 = new Alert(); v1.show(); 
+        import {Alert, AlertTitle, AlertTitleButton} from './classES6.js'; 
+        var v1 = new Alert(); 
+        v1.show(); 
         var v2 = new AlertTitle();
         v2.show(); 
         v2.setTitle('我是标题'); 
