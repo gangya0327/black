@@ -1,0 +1,145 @@
+/*地址搜索样式*/
+#result1{right: 170px;display: inline-block;min-width: 300px;}
+
+
+
+.hotel-main{position: relative;min-width: 1180px;width: 1180px;margin: 10px auto 100px auto;}
+.hotel-body { background-color: #eff0f4;}
+.form-search{background-color: #f9fbfc;width: 1180px;height: 75px;border: 1px solid #D9D9D9;padding-top: 20px;padding-left: 20px;font-size: 14px;}
+.form-search input{width: 220px;height: 34px;border: 1px solid #718aa5;margin-right: 10px;}
+.btn-hotel{width: 114px;height: 34px;color: #ffffff;background-color: #4672C0;border: none;margin-left: 45px;}
+.Info-seclect{width: 1180px;height: auto;background-color: #ffffff;margin-top: 10px;padding: 0px 15px 5px 15px;border: 1px solid #D9D9D9;color: #323B43;}
+.Info-seclect>div:last-child{border-bottom: 0;}
+.location{width: 100%;height: 44px;/*background-color: #eff0f4;*/padding-top: 10px;}
+.location .title{text-align: left;color: #797F85;}
+.location .noLImit{width: 40px;margin-right: 10px;}
+.location_sec .location .bDiv{margin-left: 23px;}
+.location>div{height: 24px;width: 60px;float: left;text-align: center;line-height: 24px;cursor: pointer;margin-right: 10px;}
+.location>div:first-child{color: #797F85;}
+.location .bDiv .fa{margin-left: 4px;vertical-align: text-top;}
+.location>div.secColor{background-color: #4672C0;color: #ffffff;}
+.location .bDiv .fa{padding-left: 5px;vertical-align: text-top;}
+.secDiv i{margin-left: 5px;position: relative;bottom: 0px;}
+.locationDetaile{background-color:#eaf0f5; margin-left: 60px;width: 1092px;height: 35px;padding: 7px 0 7px 10px;overflow: hidden;margin-bottom: 10px;}
+.locationDetaile>div{}
+.locationDetaile>div>div{float: left;width: 120px;color: #718aa5;margin-bottom: 6px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;cursor: pointer;margin-right: 29px;line-height: 22px;padding-left: 4px;}
+.locationDetaile .sec_result i{margin-right: 2px;font-size: 14px;vertical-align: text-bottom;}
+.locationDetaile .sec_result .secDiv.selected{background-color: #4672C0;color: #fff;}
+.showNext i{margin-right: 2px;cursor: pointer;}
+.locationDetaile .showNext{position: absolute;right: 25px; width: 15px;height:15px;background-color: #ffffff;border-radius:50% ;
+								line-height: 15px;text-align: center;font-size: 15px;padding-left: 2px;cursor: pointer;}
+.search_local .showNext{position: absolute;right: 25px; width: 15px;height:15px;background-color: #ffffff;border-radius:50% ;
+								line-height: 15px;text-align: center;font-size: 15px;padding-left: 2px;cursor: pointer;border: 1px solid #ececec;}
+
+.locationDetaile .showNext:hover{background-color: #718aa5;color: #ffffff;}
+
+/*价格选择*/
+.price_sec{border-top:1px dashed #dde8ee;}
+.price_sec .location .secDiv{width: 120px;text-align: left;padding-left:15px;}
+.price_sec .location .secDiv i{position: relative;top: 0px;font-size: 16px;padding-left: 2px;vertical-align: text-bottom;}
+.price_sec .location .secDiv.backgroundIcon, .price_sec .location .set_price.backgroundIcon{background-color: #4672C0;color: white;}
+.price_sec .location .set_price input{color: #323B43}
+.price_sec .location .set_price{width: 200px;line-height: 18px;margin-left: 10px;padding-top: 2px;}
+.price_sec .location .set_price input[type=text]{width: 50px;height: 20px;margin: 0 7px;border: 1px solid #999999;}
+.price_sec .location .set_price input[type=button]{width: 44px;height: 20px;border: 1px solid #999999;color: #535351;margin-left: 10px;}
+
+/*星级选择*/
+.star_sec{border-top:1px dashed #D9D9D9;}
+.star_sec .location .secDiv{width: 105px;text-align: left;padding-left: 15px;margin-right: 15px;}
+.star_sec .location .secDiv input{position: relative;top: 2px;border: 1px solid #718aa5;margin-right: 5px;}
+
+
+/*品牌选择*/
+.PZS{border-top:1px dashed #D9D9D9;}
+.PZS .showNext{float: right;cursor: pointer;line-height: 20px;margin-right: 7px;width: 20px;}
+.PZS .showNext img.rotateUp{transform: rotateX(180deg);}
+.PZS .showNext img:hover{background-color: #d2e3f5;}
+.PZS .location{height: auto;}
+.PZS .Result{width: 1000px;text-align: left;padding-left: 15px;height: 24px;overflow: hidden;}
+.PZS .Result>div{float: left;width: 105px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 15px;}
+.PZS .Result>div input{position: relative;top:2px;margin-right: 7px;}
+
+.resultNum{padding-bottom: 10px;overflow: hidden;height: 0;}
+
+/*折叠*/
+.foldService{width: 110px;height: 24px;background-color: #a6b9ce;color: #ffffff;text-align: center;line-height: 24px;position: relative;left: 524px;cursor: pointer;}
+
+/*查询结果*/
+.resultNum ul{padding-top: 20px;}
+.resultNum li{float: left;height: 26px;}
+.resultNum .condition{text-align: center;line-height: 26px;border: 1px solid #718aa5;padding:0 10px ;color: #718aa5;margin-left: 10px;margin-bottom: 5px;}
+.Snum span{font-size: 15px;color: #e26a6a;}
+.conditionBtn{border: none;background-color: transparent;color: #51a6f0;margin-left: 10px;  position: relative;top: 4px;}
+.condition i{cursor: pointer;}
+.conditionBtn:hover{color: #E26A6A;}
+/*列表头*/
+.resultList{border: 1px solid #D9D9D9 ;width: 100%;height: 46px;background-color: #F0F0F0;color: #D9D9D9;padding: 0 20px;}
+.resultList ul{line-height: 46px;}
+.resultList li{display: inline-block; color: #718aa5;margin-right: 34px;font-size: 13px;}
+.resultList li:first-child{color: #4672C0;}
+.resultList li img{display: none;padding-bottom: 3px;}
+
+/*列表详情*/
+.listInfo{width: 1180px;height: 160px;border: 1px solid #D9D9D9;border-bottom: none;padding: 14px;}
+.listInfo>div{float: left;}
+.hotelList{background-color: #ffffff;}
+.hotelList .TipImg{position: relative;left: 455px;top: 4px;}
+.hotelList .TipImg1{position: relative;left: 500px;margin-bottom: 30px;margin-top: 20px;}
+.detTip {font-size: 15px;font-weight: bold;position: relative;top: -19px;right: 27px; text-align: center;}
+
+.hotelList .hotelImg{position: relative;overflow: hidden;height: 132px;width: 236px;}
+.hotelList .hotelImg img{width: 236px;position: absolute;top: -52px;}
+
+.hotelList .hotelInfo{width: 900px;height: 122px;margin: 5px 0;}
+.listInfo:hover{background-color: #e6edf5;}
+.hotelInfo ul{float: left;height: 100%;}
+.Fu{padding-left: 15px;width: 520px;font-size: 14px;}
+.Fu .hotelCount{background-color: #4672C0;padding: 0 6px;color: white;margin-right: 6px;}
+.Fu .Img{display: inline-block;width: 18px;height: 24px;background-image:url(../../images/hotel/2.png) ;text-align: center;color: #ffffff;}
+.Fu .lookMap{color: #797F85;}
+.Fu .lookMap img{vertical-align: text-top;width: 18px;}
+.Fu .smallImg img{width: 16px;height: 17px;}
+.Fu li{margin-bottom: 5px;}
+.Su li{margin-bottom: 5px;}
+.Su li:first-child{color: #777;}
+.sortNum{position: relative;right: 13px;color: #ffffff;}
+.hotelName{font-size: 18px;font-weight: bold;}
+.businessCircle{margin-right: 5px;cursor: pointer;}
+.Zcolor{color: #4672C0;}/*字体色*/
+.Su{padding-top: 30px;border-right: 1px solid #D9D9D9;border-left: 1px solid #D9D9D9;width: 180px;text-align: center;}
+.Su .scope{color: #0084bb;font-size: 20px;}
+.Tu{width: 200px;font-size: 14px;padding-left: 20px;padding-top: 15px;}
+.Tu li{margin-bottom: 15px;text-align: center;}
+.Tu li i,.Tu li span{color: #e26a6a;font-weight: 600;}
+.Tu li span{font-size: 30px;font-weight: bold;margin: 0 9px 0px 6px;}
+.Hbtn{width: 110px;height: 32px;color: #FFFFFF;border: none;background-color: #4672C0;}
+.sort li,#example{cursor: pointer;}
+.page{text-align: center;}
+
+.addmore p{text-align: center;cursor: pointer;font-size: 14px;color: #797f85;margin-top: 8px;}
+
+.booker-select{height: 60px;background-color: white;line-height: 60px;font-size: 14px;display: none;}
+.selectIcon{color: #D9D9D9;float: left;margin: 0 20px;}
+.selectBtn{float: left;}
+.selectBtn span{font-family: PingFangSC-Semibold;font-size: 14px;color: #4672C0;border: 1px solid #4672C0;padding: 4px 15px;font-weight: 700;cursor: pointer;}
+.selectBtn span:hover{color: #51a6f0;border: 1px solid #51a6f0;}
+.booker-selected {display: none;}
+.booker-selected{height: 130px;line-height: 130px;background-color: white;font-size: 14px;}
+.booker-selected .col{float: left;margin: 30px 5px;min-width: 150px;}
+.booker-selected .col:last-child{color: #4672C0;float: right;cursor: pointer;}
+.booker-selected .col>div{line-height: 35px;}
+.booker-selected .col span{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 155px;display: inline-block;vertical-align: bottom;}
+.booker-select, .booker-selected{border-top: 1px solid #D9D9D9;border-left: 1px solid #D9D9D9;border-right: 1px solid #D9D9D9;}
+.form-item{position: relative;display: inline-block;}
+.form-item input[type=text]{padding-left: 30px;background: none;}
+.form-item img{position: absolute;top: 6px;left: 5px;}
+#bookerPolicy{line-height: 20px;vertical-align: text-top;max-width: 350px;overflow: auto;white-space: normal;color: #797F85;font-size: 12px;}
+.showMap{width: 100%;height: 100%;position: fixed;top: 0;display: none;}
+.showMap .coverPage{width: 100%;height: 100%;background-color: #000;top: 0;opacity: 0.4;}
+.showMap #hotelMap{width: 800px;height: 500px;top: 50%;position: fixed;left: 50%;transform: translate(-50%,-50%);background-color: #fff;}
+
+.Info-seclect label{font-weight: 400;position: relative;cursor: pointer;padding: 0 8px;}
+.Info-seclect label.selected{background-color: #4672C0;color: white;}
+.Info-seclect label input{visibility: hidden;}
+.star_sec .secDiv, .PZS .secDiv{cursor: default;}
+.star_sec .secDiv .fa, .PZS .secDiv .fa{position: absolute;font-size: 16px;line-height: 24px;margin-left: 0;padding-left: 2px;}
